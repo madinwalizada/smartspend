@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../supabase";
+import Expenses from "./Expenses";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Dashboard() {
@@ -63,7 +64,7 @@ function Dashboard() {
         )}
         {active === "expenses" && (
           <div className="text-gray-900 font-semibold text-xl">
-            Expenses — coming soon
+            {active === "expenses" && <Expenses />}
           </div>
         )}
         {active === "budget" && (
