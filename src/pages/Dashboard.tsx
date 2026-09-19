@@ -2,6 +2,7 @@ import { useState } from "react";
 import { supabase } from "../supabase";
 import Expenses from "./Expenses";
 import Budget from "./Budget";
+import Overview from "./Overview";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 function Dashboard() {
@@ -60,7 +61,7 @@ function Dashboard() {
       <main className="ml-52 flex-1 p-8">
         {active === "dashboard" && (
           <div className="text-gray-900 font-semibold text-xl">
-            Dashboard — coming soon
+            {active === "dashboard" && <Overview />}
           </div>
         )}
         {active === "expenses" && (
